@@ -8,6 +8,6 @@ type Customer struct {
 func (c *Customer) updateAddress(address Address) {
 	c.Address = address
 	for _, account := range c.Accounts {
-		account.Address = address
+		account.updateAddress(address)
 	}
 }
